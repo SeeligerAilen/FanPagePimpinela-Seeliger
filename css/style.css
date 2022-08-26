@@ -1,0 +1,120 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+body {
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.titulo{
+    color: #b1740f;
+    font-size: 50px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.headerIndex{
+    background-image: url(../img/pimpinela.png);
+    background-size: cover;
+    height: 300px;
+    justify-content: space-between;
+}
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: #fff;
+}
+.nav {
+    background-color: #540804;
+    display: flex;
+    flex-direction: column;
+}
+.tituloS {
+    text-align: center;
+    padding: 10px;
+}
+.spotify {
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, #540804, #efefef);
+    border-radius: 20px;
+    background-size: cover;
+    margin-bottom: 15px;
+}
+
+/* Discografia */
+.titulo {
+    text-align: center;
+}
+.animacionTitulo{
+    animation-name: girando;
+    animation-iteration-count: initial;
+    animation-duration: 2s;
+ }
+ .foto{
+    filter: grayscale(1);
+}
+.foto:hover{
+    filter: grayscale(0);
+    transform: scale(1.2);
+}
+.albums {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+.albums div {
+    padding: 15px;
+    margin-left: 15%;
+    height: 400px;
+}
+.canciones {
+    height: 150px;
+    width: 85%;
+    margin-top: 15px;
+    margin-left: 5px;
+    overflow: auto;
+    padding-left: 25px;
+    font-size: 15px;
+    color: #000;
+}
+
+/* footer */
+.footer {
+    background-color: #540804;
+    padding: 20px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer a:hover{
+    color: #000000;
+}
+@media (min-width: 768px) {
+    .nav a:hover{
+        transform: scale(1.2);
+    }
+    .footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .albums {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width:1024px) {
+    .albums {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@keyframes girando{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
